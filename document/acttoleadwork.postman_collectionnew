@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "0d0131c9-7d96-4fd6-97af-ba7b872600e9",
+		"name": "acttoleadwork",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "makesr",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getsr",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatesr",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendemailsendgrid",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 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",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"personalizations\": [\n        {\n            \"to\": [\n                {\n                    \"email\": \"manish.shukla0504@gmail.com\"\n                },\n                {\n                    \"email\": \"mshukla@gmail.com\"\n                }\n            ],\n            \"dynamic_template_data\":{\n \"CustomerName\":\"Manish Shukla\"\n ,\"CustomerEmail\":\"abc@dsdsdfds.com\"\n ,\"CustomerPhoneNumber\":\"+912342343223\"\n ,\"SerialNumber\":\"SDFSDFDSFDSFDSFDSF\"\n ,\"Comment\":\"this is not a good machine\"\n ,\"EngineerName\":\"Ramesh Tyagi\"\n ,\"EngineerEmail\":\"abc@hotmail.com\"\n ,\"EngineerphoneNumber\":\"+91798977899\"\n ,\"MonoRead\":5000\n ,\"ColorRead\":4000\n ,\"DealerName\": \"Your best dealers\"\n ,\"leadingSentence\":\"Thank you for being a valued customer. We have created case for you. Following are the details:\"\n}\n        }\n    ],\n    \"from\": {\n        \"email\": \"manish_shukla01@hotmail.com\"\n    },\n    \"subject\": \"html formatted email\",\n    \"template_id\":\"d-110855ef5ca140caae2d6a9418e83283\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.sendgrid.com/v3/mail/send",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sendgrid",
+						"com"
+					],
+					"path": [
+						"v3",
+						"mail",
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getauthz",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getmachines",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IkN0VHVoTUptRDVNN0RMZHpEMnYyeDNRS1NSWSIsImtpZCI6IkN0VHVoTUptRDVNN0RMZHpEMnYyeDNRS1NSWSJ9.eyJhdWQiOiJhcGk6Ly81ZGQzYmE4MC02YWUyLTQ2MjUtOWY0Zi02Yjc3YjVjNmQ3NTEiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9mZjNmNTk3My04ZGFiLTQ0YTUtYTU2ZS00ODVlMDFmZjBjNTAvIiwiaWF0IjoxNTkwOTg1NjI0LCJuYmYiOjE1OTA5ODU2MjQsImV4cCI6MTU5MDk4OTUyNCwiYWNyIjoiMSIsImFpbyI6IkFUUUF5LzhQQUFBQXIrN3IzOXFBb3dzWkVyYWw5d0NrY0VOdGtoY2xKeEV2a29vQUxTbEM1L05uaVBvU00yWDhlYjdEelBUR1ZZaFEiLCJhbXIiOlsicHdkIl0sImFwcGlkIjoiNWRkM2JhODAtNmFlMi00NjI1LTlmNGYtNmI3N2I1YzZkNzUxIiwiYXBwaWRhY3IiOiIwIiwiZ2l2ZW5fbmFtZSI6IkNJTUFQIiwiaXBhZGRyIjoiODYuMTUzLjAuMTM2IiwibmFtZSI6IkNJTUFQIFVzZXIxIiwib2lkIjoiMjBkOTViZmEtZjk5NS00NTk2LTgzNWQtZGEwOTE3OGU1YTViIiwic2NwIjoiY2FsbGV2ZXJ5dGhpbmciLCJzdWIiOiJsRjRLMnkxQWVIZkcxR25JdjB6dGFYUXkwMmpna2kwS0N5V1JtWnpiR2NZIiwidGlkIjoiZmYzZjU5NzMtOGRhYi00NGE1LWE1NmUtNDg1ZTAxZmYwYzUwIiwidW5pcXVlX25hbWUiOiJjaW1hcHVzZXIxQGFjdHRvbGVhZC5vbm1pY3Jvc29mdC5jb20iLCJ1cG4iOiJjaW1hcHVzZXIxQGFjdHRvbGVhZC5vbm1pY3Jvc29mdC5jb20iLCJ1dGkiOiJlbUxqeWl6eGQwU3drLUx0NlZrX0FRIiwidmVyIjoiMS4wIn0.oUWOSbvCGlIRGPfYAnsLzPdbadWpSv3pBCmAEj0fYYFeY8ecnBbyM-jic-fQKAyIt-h8PbA2pEXxBAdy8tp-haJ-_tH5J_QRFJOrlj-rrrZFDABizWkk7idaRNgVCO1CQIwnhSIN0S3BagGHbQDtBspP5SNI8qKuA65wYICqWddlYqFO-2MAuRWA_POFm_p4jugolWh8xW2JTtZAQcvF6fgkJEL_IIXpGLfc95p_HRHHk3UtFJlXqekH5lGoeFgcixyCLHHo4Tubg2_BmWVteGNX-D5sakwyfkWGoWf_G0OIyTL0D0ZeauTZhrc_gn_79lhZg0BdffHS0isvE-E3uA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:44300/api/machinebycustomerv2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44300",
+					"path": [
+						"api",
+						"machinebycustomerv2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

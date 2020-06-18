@@ -1,0 +1,45 @@
+<div class="row  mt-5">
+    <div class="col-md-12 mb-2">
+        <button mat-raised-button color="warn"  (click)="backToHome()"><span class="material-icons">home</span> Back To Home</button>
+    </div>
+    <div class="col-md-12">
+        <div class="text-center" *ngIf="spinner">
+            <mat-spinner class="mx-auto"></mat-spinner>
+        </div>
+        <div class="card"  *ngIf="dataWithToken">
+            <div class="wrapper row">
+                <div class="preview col-md-4">
+                    <div class="preview-pic tab-content">
+                      <div class="tab-pane active" id="pic-1">
+                          <img src="https://5.imimg.com/data5/XV/PS/MY-25996381/ricoh-mp-2014d-copier-printer-500x500.jpg" />
+                      </div>
+                    </div>
+                </div>
+                <div class="details col-md-8">
+                    <h3 class="product-title">
+                        {{dataWithToken.model}}
+                        (<span>{{dataWithToken.serialNumber}}</span>) | {{dataWithToken.typeofContract}}
+                    </h3>
+                    <h4 class="price mb-0">sheetCapability: <span>{{dataWithToken.sheetCapability}}</span></h4>
+                    <h4 class="price mb-0">speedColor: <span>{{dataWithToken.speedColor}}</span></h4>
+                    <h4 class="price mb-0">speedMono: <span>{{dataWithToken.speedMono}}</span></h4>
+                    <div class="action">
+                        <button mat-raised-button color="primary">
+                            <span class="material-icons">build</span>    
+                            Update Call
+                        </button>
+
+                        <button 
+                        mat-raised-button
+                        color="warn"
+                        (click)="serviceCallDialog(dataWithToken.serialNumber)"
+                        >
+                            <span class="material-icons">call</span>    
+                            Service Call
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

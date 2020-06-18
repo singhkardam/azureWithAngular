@@ -1,0 +1,124 @@
+How to use api "https://apiappacttolead.azurewebsites.net/api/machineDetails/G639M430232";
+login 
+login data
+
+Date => 14-5-2020
+
+======
+
+	portal to add users: (you dont need to do this) use the below for now.
+	https://aad.portal.azure.com/ 
+
+======
+
+	Azure Active Directory admin center
+	The Azure portal doesn’t support your browser. Supported web browsers + devices.
+	aad.portal.azure.com
+
+======
+
+>>>>Username And Password<<<<
+
+	manish@acttolead.onmicrosoft.com
+	JaySriRadhe#1
+	
+	ashish@acttolead.onmicrosoft.com
+	Ank@786990
+	
+	ankit@acttolead.onmicrosoft.com
+	Ank@786990
+	
+	cimapuser1@acttolead.onmicrosoft.com
+	RadheRadhe@1
+
+======
+
+>>>> Have To Read <<<<
+
+	MSAL Angular documentation. You should be able to copy paste api calling code from here after understanding what it is doing.
+	https://www.npmjs.com/package/@azure/msal-angular
+
+======
+
+	My similar react code to call the api is in this project (link to the file):
+	https://github.com/manish-shukla01/acttoleadwebapp/blob/master/src/App.js
+
+======
+
+	basically call the api with authorization header and put bearer token in it. API endpoint is this:
+	https://apiappacttolead.azurewebsites.net/api/machinebycustomer
+
+	https://apiappacttolead.azurewebsites.net/weatherforecast shoudl work without any token. its open and has no auth on it.
+
+	Remember to add your localhost setting in the app registration in redirect uri but we already added so it should not be needed unless your site runs on some different port.
+
+
+	with this, i dont think you really need the video. Your immediate action is to call the api with bearer token. Dont worry about the api yet. i will show you how to do that too.
+
+======
+
+https://github.com/manish-shukla01/acttoleadwebapp
+https://github.com/manish-shukla01/acttoleadwebapp/blob/master/src/App.js
+
+
+
+////// UseFull Links ///////
+https://www.google.com/search?client=ms-android-xiaomi&sxsrf=ALeKk00864Jpu-KrDsQqdC6BiRmfFaVZvA:1589651051654&q=azure+msal+angular+http+get+with+token+sample&sa=X&ved=2ahUKEwiDqIDS97jpAhW0wjgGHZF7BUEQ7xYoAHoECAsQAg&biw=360&bih=559&dpr=2
+
+
+https://www.youtube.com/watch?v=HVruBWuKnYw&feature=youtu.be
+https://www.youtube.com/watch?v=RSqREkxe2z0&feature=youtu.be
+https://www.youtube.com/watch?v=406fMgEt4Vg&feature=youtu.be
+https://www.youtube.com/watch?v=PCsyemPGqfY&feature=youtu.be
+https://www.youtube.com/watch?v=AcuzemsJfxA&feature=youtu.be
+https://www.youtube.com/watch?v=-G7kStvqgcg&feature=youtu.be
+https://www.youtube.com/watch?v=Yj2xVTMDoIY&feature=youtu.be
+https://www.youtube.com/watch?v=30B7efdpNxI&feature=youtu.be
+https://www.youtube.com/watch?v=8JBk4M2pIfs&feature=youtu.be
+
+
+https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/angular9-sample-app/src
+https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/samples/MSALAngularDemoApp/src/app/app.component.ts
+
+https://medium.com/free-code-camp/48-answers-on-stack-overflow-to-the-most-popular-angular-questions-52f9eb430ab0
+
+
+https://stackoverflow.com/questions/47400929/how-to-add-authorization-header-to-angular-http-request
+
+ankit@acttolead.onmicrosoft.com
+Ank@786990
+
+
+https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/samples/angular9-sample-app/src/app/app.component.ts
+
+Manish Sir Task => 
+
+	https issue 
+	deploye app
+	secure or unsecure
+	open details page of product 
+	
+	
+	
+chargeCustomerName: "CANARA HSBC OBC LIC LTD."
+cmbwA3: 0
+cmbwA4: 200
+cmcoA3: 0
+cmcoA4: 0
+contractEnd: "2/17/2023 12:00:00 AM"
+contractNumber: "1100019837"
+contractStart: "2/18/2020 12:00:00 AM"
+contractType: "RNTBW"
+entity: "1211"
+imagePath: "notSet"
+itemDescription: "MP 2014D"
+lmbwA3: 0
+lmbwA4: 0
+lmcoA3: 0
+lmcoA4: 0
+meterDateFrom: "18/02/2020"
+meterDateTo: "17/03/2020"
+partnerName: "AGRA (SICURO SYSTEMS)"
+phoneNumber: "+919958803685"
+region: "North"
+serialNumber: "G639M430232"

@@ -1,0 +1,42 @@
+
+
+<div class="row mt-3 mb-3">
+    <div class="col-md-12 text-right">
+        <button mat-raised-button color="primary" *ngIf="!loggedIn" (click)="login()">Login</button>
+        <button mat-raised-button color="warn" *ngIf="loggedIn" (click)="logout()">Logout</button>
+    </div>
+</div>
+
+
+
+<div class="text-center" *ngIf="spinner">
+    <mat-spinner class="mx-auto"></mat-spinner>
+</div>
+
+<div class="row">
+    <div class="col-md-3 mb-3" *ngFor="let data of dataWithToken;index as i">
+        <div class="border border-secondary pb-3">
+            <div class="">
+                <div class="col-md-12">
+                    <img 
+                    src="https://5.imimg.com/data5/XV/PS/MY-25996381/ricoh-mp-2014d-copier-printer-500x500.jpg" 
+                    alt=""
+                    class="w-100"
+                    >
+                </div>
+                <div class="col-md-12 mt-3">
+                    <h2 class="mb-0">{{ data.model }}</h2>
+                    <p><b>{{ data.serialNumber }} | ({{ data.typeofContract }})</b></p>
+                    <p></p>
+                    <div class="text-right">
+                        <a 
+                        mat-raised-button color="warn" 
+                        *ngIf="loggedIn" 
+                        routerLink="description/{{i}}"
+                        (click)="moreInfo()">More Info <span class="material-icons">info</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

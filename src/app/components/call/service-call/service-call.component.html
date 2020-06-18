@@ -1,0 +1,49 @@
+<div class="service-call-container">
+<h2 mat-dialog-title>Make a Service Call</h2>
+<form [formGroup]="serviceCallForm" (ngSubmit)="onSubmit()">
+    <mat-dialog-content>
+        <div class="form-group">
+            <input 
+            type="text" 
+            class="form-control"
+            formControlName="serialNumber" 
+            placeholder="Your Serial Number" 
+            id="serialNumber"
+            >
+        </div>
+        <div class="form-group">
+            <input 
+            type="email" 
+            class="form-control" 
+            formControlName="email" 
+            placeholder="Enter email" 
+            id="email">
+        </div>
+        <div class="form-group">
+            <input 
+            type="number" 
+            class="form-control" 
+            formControlName="number" 
+            placeholder="Enter Your Number" 
+            id="number">
+        </div>
+        <div class="form-group">
+            <input 
+            type="text" 
+            class="form-control" 
+            formControlName="address" 
+            placeholder="Enter Your Address" 
+            id="address">
+        </div>
+    </mat-dialog-content>
+
+    <mat-dialog-actions class="pt-0">
+
+        <button 
+        class="w-100"
+        mat-raised-button color="warn"
+        >Submit</button>
+
+    </mat-dialog-actions>
+</form>
+</div>
